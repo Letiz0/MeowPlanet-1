@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - 喵屋星球</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    @RenderSection("Styles", required: false)
+</head>
+<body class="d-flex flex-column">
+    <header>
+        <nav>
+            <div class="container-fluid bg-dark">
+                <a class="navbar-brand" href="#"><img src="~/images/LOGO.png" width="86" height="77"></a>
+            </div>
+        </nav>
+    </header>
+    <div class="my-3" style="flex-grow: 1;">
+        <main role="main" class="h-100 container-fluid">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="bg-dark text-center text-lg-start text-white">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright:
+            <a class="text-white" href="#">MeowWu.com</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
