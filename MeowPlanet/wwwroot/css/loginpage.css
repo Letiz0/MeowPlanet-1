@@ -30,10 +30,9 @@ body {
     width:100%;
 }
 
-.loginsection .loginform {
+/*.loginform {
     margin:auto;
     text-align:center;
-    
 }
 
 .loginform h2{
@@ -47,6 +46,48 @@ body {
 
 .loginform form {
     width:60%;
+}*/
+
+.loginform h2{
+    color:white;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.loginform .form-p{
+    color:white;
+    margin-left:30%;
+}
+
+.login-sp {
+    width: 400px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3);
+    border: 1px rgb(219, 232, 248) solid;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom:20px;
+}
+
+.cbox {
+    margin-left: 30%;
+    color:white;
+    margin-bottom:3%;
+}
+
+.cbox a{
+    color:white;
+    margin-left:150px
+}
+
+.cbox a:hover{
+    color:blue;
+}
+
+.or-p{
+    color:white;
+    margin:5%;
 }
 
 html {
