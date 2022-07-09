@@ -15,7 +15,7 @@ namespace MeowPlanet.Controllers
 
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Missings");
+            return View();
         }
 
         public IActionResult Privacy()

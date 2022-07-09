@@ -11,21 +11,44 @@
 </head>
 <body class="d-flex flex-column">
     <header>
-        <nav>
-            <div class="container-fluid bg-dark">
-                <a class="navbar-brand" href="#"><img src="~/images/LOGO.png" width="86" height="77"></a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark2">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" id="logo">
+                    <img src="@Href("~/Images/LOGO.png")" alt=""> 喵屋星球
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a href="#">
+                                貓咪保母
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a asp-area="" asp-controller="Missings" asp-action="Index">
+                                協尋貓咪
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                                貓咪想家
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <partial name="_LoginPartial" />
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <div class="my-3" style="flex-grow: 1;">
-        <main role="main" class="h-100 container-fluid">
-            @RenderBody()
-        </main>
-    </div>
-    <footer class="bg-dark text-center text-lg-start text-white">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2021 Copyright:
-            <a class="text-white" href="#">MeowWu.com</a>
+    @RenderBody()
+    <footer class="footer text-muted bg-dark2">
+        <div class="container">
+            &copy; 第四組 - MeowPlanet -
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -56,6 +56,7 @@ namespace MeowPlanet.Models
                 entity.Property(e => e.Reward).HasColumnName("reward");
             });
 
+
             OnModelCreatingPartial(modelBuilder);
         }
 

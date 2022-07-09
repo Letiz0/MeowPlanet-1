@@ -1,6 +1,7 @@
 ﻿@model MeowPlanet.Models.Missing
 
-<div class="row h-100 flex-nowrap" style="justify-content: space-evenly">
+
+<div class="row h-100 flex-nowrap my-3" style="justify-content: space-evenly">
     <div class="w-20" id="div-items" style="transition: all 1s ease;"></div>
     <div class="col-9 p-0" id="div-map" style="overflow: hidden; position: relative; transition: all 1s ease; ">
         <div id="map"></div>
@@ -13,6 +14,9 @@
         </button>
     </div>
 </div>
+
+
+
 
 
 @*刊登協尋的彈出視窗*@
@@ -48,15 +52,17 @@
 </div>
 
 @section Scripts{
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="~/lib/datepicker/i18n/datepicker.zh-TW.min.js"></script>
     <script async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU26gdtCyFPCboOi3luDez0bJwBS0jgF0&libraries=places&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU26gdtCyFPCboOi3luDez0bJwBS0jgF0&libraries=places&callback=initMap">
     </script>
     <script src="~/js/map.js"></script>
     <script>
-        $.get('@Url.Action("GetMissing", "Missings")', function (data, status) {
+        $.get('@Url.Action("GetMissing", "Missings")', function(data, status) {
 
             for (var i = 0; i < data.length; i++) {
                 cat = data[i];
@@ -87,6 +93,7 @@
     </script>
 }
 
-@section Styles{
+    @section Styles{
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/ui-darkness/jquery-ui.css">
+    <link rel="stylesheet" href="~/css/missing.css" />
 }

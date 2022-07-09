@@ -21,6 +21,7 @@ namespace MeowPlanet.Models
         // GET: Missings
         public ActionResult Index()
         {
+            GetMissing();
             return View();
         }
 
