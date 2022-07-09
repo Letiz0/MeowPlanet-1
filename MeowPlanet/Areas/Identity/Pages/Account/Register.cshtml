@@ -4,9 +4,74 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
+@section Styles{
+    <link href="~/css/loginpage.css" rel="stylesheet" />
+}
 
-<div class="row">
+    <section class="loginsection">
+        <div class="container-fluid">
+            <div class="row h-100">
+                <div class="col-6 p-0">
+                    <img src="@Href("~/Images/planet.jpg")">
+                </div>
+                <div class="col-6 p-5 loginform">
+                    <form id="account" method="post">
+                        <div class="text-center">
+                            <h2>會員註冊</h2>
+                        </div>
+                        <div class="text-center">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        </div>
+                        
+                        <p class="form-p">Email</p>
+                        <div class="d-flex justify-content-center">
+                            <input asp-for="Input.Email" class="form-control login-sp" autocomplete="username" aria-required="true" />
+                        </div>
+
+                        <div class="text-center">
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+
+                        <p class="form-p">密碼</p>
+                        <div class="d-flex justify-content-center">
+                            <input asp-for="Input.Password" class="form-control login-sp" autocomplete="current-password" aria-required="true" />
+                        </div>
+
+                        <div class="text-center">
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+
+                        <p class="form-p">確認密碼</p>
+                        <div class="d-flex justify-content-center">
+                            <input asp-for="Input.ConfirmPassword" class="form-control login-sp" autocomplete="new-password" aria-required="true" />
+                        </div>
+
+                        <div class="text-center">
+                             <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-center my-5">
+                            <button id="registerSubmit" type="submit" class="login-sp">註冊</button>
+                        </div>
+
+
+                    </form>
+
+                    <div class="d-flex justify-content-center my-5">
+                        <a class="btn return-sp" asp-area="Identity" asp-page="/Account/Login" id="loginbtn">
+                            返回登入
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+@*<div class="row">
+
+
     <div class="col-md-4">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <h2>Create a new account.</h2>
@@ -60,7 +125,7 @@
             }
         </section>
     </div>
-</div>
+</div>*@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

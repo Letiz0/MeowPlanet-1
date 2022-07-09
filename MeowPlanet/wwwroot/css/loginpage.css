@@ -4,59 +4,52 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+    /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
+    
+}
+
 body {
     font-family: '·L³n¥¿¶ÂÅé';
     font-size: 20px;
     background-color: #171b20;
-    overflow: hidden;
     background-image: radial-gradient(rgb(27, 39, 53) 0%, rgb(0, 0, 0) 100%);
     position: absolute;
-    width: 100%;
+    /*overflow-y:hidden;*/
+    height: 100vh;
     height: 100%;
 }
 
-.loginsection{
-    height:100%;
-}
-
-.loginsection .container-fluid{
-    height:100%;
-    display:flex;
-    align-content:center;
-}
-
-.loginsection img{
+.loginsection {
     height: 100%;
-    width:100%;
 }
 
-/*.loginform {
-    margin:auto;
-    text-align:center;
+    .loginsection .container-fluid {
+        height: 100%;
+        display: flex;
+        align-content: center;
+    }
+
+    .loginsection img {
+        height: 100%;
+        width: 100%;
+    }
+
+.loginform{
+    height:100%;
 }
 
-.loginform h2{
-    color:white;
-    margin-bottom:10%;
-}
-
-.loginform label {
+.loginform h2 {
     color: white;
+    font-size: 30px;
+    /*margin-top:5%;*/
+    margin-bottom: 30px;
 }
 
-.loginform form {
-    width:60%;
-}*/
-
-.loginform h2{
-    color:white;
-    font-size:30px;
-    margin-bottom:30px;
-}
-
-.loginform .form-p{
-    color:white;
-    margin-left:30%;
+.loginform .form-p {
+    color: white;
+    margin-left: 30%;
 }
 
 .login-sp {
@@ -67,33 +60,68 @@ body {
     border-radius: 20px;
     color: white;
     text-align: center;
-    margin-bottom:20px;
+    margin-bottom: 20px;
+    display:block;
+}
+
+.return-sp {
+    width: 400px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3);
+    border: 1px rgb(219, 232, 248) solid;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+}
+.login-sp:hover {
+    width: 400px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3);
+    border: 1px rgb(219, 232, 248) solid;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
 }
 
 .cbox {
     margin-left: 30%;
-    color:white;
-    margin-bottom:3%;
+    color: white;
+    margin-bottom: 3%;
 }
 
-.cbox a{
-    color:white;
-    margin-left:150px
+    .cbox a {
+        color: white;
+        margin-left: 150px
+    }
+
+        .cbox a:hover {
+            color: blue;
+        }
+
+.or-p {
+    color: white;
+    margin: 5%;
 }
 
-.cbox a:hover{
-    color:blue;
+.link-icon img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5%;
 }
 
-.or-p{
-    color:white;
-    margin:5%;
+.re-a a {
+    color: white;
 }
 
-html {
-    height: 100vh;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-}
+    .re-a a:hover {
+        color: blue;
+    }
+
+
 
 #stars {
     width: 1px;
@@ -158,5 +186,3 @@ html {
         transform: translateY(-3000px)
     }
 }
-
-
