@@ -7,7 +7,6 @@
 html {
     height: 100vh;
     /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
-    
 }
 
 body {
@@ -36,21 +35,21 @@ body {
         width: 100%;
     }
 
-.loginform{
-    height:100%;
+.loginform {
+    height: 100%;
 }
 
-.loginform h2 {
-    color: white;
-    font-size: 30px;
-    /*margin-top:5%;*/
-    margin-bottom: 30px;
-}
+    .loginform h2 {
+        color: white;
+        font-size: 30px;
+        /*margin-top:5%;*/
+        margin-bottom: 30px;
+    }
 
-.loginform .form-p {
-    color: white;
-    margin-left: 30%;
-}
+    .loginform .form-p {
+        color: white;
+        margin-left: 30%;
+    }
 
 .login-sp {
     width: 400px;
@@ -61,7 +60,7 @@ body {
     color: white;
     text-align: center;
     margin-bottom: 20px;
-    display:block;
+    display: block;
 }
 
 .return-sp {
@@ -74,18 +73,20 @@ body {
     text-align: center;
     margin-bottom: 20px;
     display: block;
+    font-size: 20px;
 }
-.login-sp:hover {
-    width: 400px;
-    height: 40px;
-    background: rgba(0, 0, 0, .3);
-    border: 1px rgb(219, 232, 248) solid;
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-    display: block;
-}
+
+    .return-sp:hover {
+        width: 400px;
+        height: 40px;
+        background: rgba(0, 0, 0, .3);
+        border: 1px rgb(219, 232, 248) solid;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        display: block;
+    }
 
 .cbox {
     margin-left: 30%;
