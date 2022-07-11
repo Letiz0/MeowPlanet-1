@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MeowPlanet.Data;
+using MeowPlanet.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MeowPlanet.Controllers
 {
     public class MemberController : Controller
     {
-        public IActionResult Login()
+        private readonly ApplicationDbContext _context;
+
+        public MemberController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public IActionResult Index()
         {
             return View();
         }
+
     }
 }
