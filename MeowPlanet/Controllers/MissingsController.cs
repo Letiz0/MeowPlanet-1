@@ -21,17 +21,16 @@ namespace MeowPlanet.Models
         // GET: Missings
         public ActionResult Index()
         {
-            GetMissing();
             return View();
         }
 
         
         [HttpPost]
-        public async Task<IActionResult> AddMissing([Bind("CatId", "Date", "Lat", "Lng")]Missing cat)
+        public async Task<IActionResult> AddMissing([Bind("CatId", "Date", "Lat", "Lng")]Missing missingCat)
         {
             if (ModelState.IsValid)
             {
-                _context.Missings.Add(cat);
+                _context.Missings.Add(missingCat);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
@@ -45,7 +44,7 @@ namespace MeowPlanet.Models
         {           
             foreach (var item in _context.Missings)
             {
-                Missing cat = new Missing
+                Missing missingCat = new Missing
                 {
                     CatId = item.CatId,
                     Date = item.Date,
@@ -53,7 +52,7 @@ namespace MeowPlanet.Models
                     Lng = item.Lng
                 };
 
-                catList.Add(cat);
+                catList.Add(missingCat);
             }
 
             var data = catList;
